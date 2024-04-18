@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'PROJET_ANDROID'
+      MYSQL_USER: 'User_android'
+      MYSQL_PASSWORD: 'Password_android'
+      MYSQL_ROOT_PASSWORD: 'Root_Password' # Ajouté pour définir le mot de passe root de MySQL
+    ports:
+      - '3306:3306' # Le port par défaut de MySQL est 3306, donc vous pouvez utiliser le même port
+    volumes:
+      - db-data:/var/lib/mysql # Utilisation du volume pour persister les données de la base de données
+
+networks:
+  app-network:
+
+volumes:
+  db-data:
