@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Projet_Gerante_Domergue</string>
+    <string-array name="fonction_options">
+        <item>citoyen</item>
+        <item>organisme</item>
+    </string-array>
 </resources>
