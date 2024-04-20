@@ -10,8 +10,8 @@
     import android.widget.Toast;
 
     import androidx.appcompat.app.AppCompatActivity;
-    import com.example.projet_gerante_domergue.activity.login.CreateUserActivity;
-    import com.example.projet_gerante_domergue.activity.login.HomeActivity;
+    import com.example.projet_gerante_domergue.activity.create_user.CreateUserActivity;
+    import com.example.projet_gerante_domergue.activity.home.HomeActivity;
     import com.example.projet_gerante_domergue.utils.PostHttpRequestAsync;
 
     import java.net.HttpURLConnection;

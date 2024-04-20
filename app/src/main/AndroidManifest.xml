@@ -29,8 +29,13 @@
         </activity>
 
         <!-- Activité de création d'utilisateur -->
-        <activity android:name=".activity.login.CreateUserActivity" />
-        <activity android:name=".activity.login.HomeActivity"/>
+        <activity android:name=".activity.create_user.CreateUserActivity" />
+        <activity android:name=".activity.home.MyAccountActivity"/>
+        <activity android:name=".activity.home.CityActivity"/>
+        <activity android:name=".activity.home.HomeActivity"/>
+        <activity android:name=".activity.account.MyEventsActivity"/>
+        <activity android:name=".activity.account.MyParticipationsActivity"/>
+
 
     </application>
 

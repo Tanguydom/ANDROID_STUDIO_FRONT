@@ -1,4 +1,5 @@
-package com.example.projet_gerante_domergue.activity.login;
+package com.example.projet_gerante_domergue.activity.create_user;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
