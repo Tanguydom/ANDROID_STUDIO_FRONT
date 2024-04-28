@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F8F8F8">
+
+    <Button
+        android:id="@+id/buttonRetourModifyUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retour"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextNomModifyUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonRetourModifyUser"
+        android:hint="Nom"
+        android:inputType="text"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        android:padding="12dp"/>
+
+    <EditText
+        android:id="@+id/editTextPrenomModifyUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextNomModifyUser"
+        android:hint="Prénom"
+        android:inputType="text"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        android:padding="12dp"/>
+
+    <EditText
+        android:id="@+id/editTextEmailModifyUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPrenomModifyUser"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        android:padding="12dp"/>
+
+    <EditText
+        android:id="@+id/editTextMotDePasseModifyUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextEmailModifyUser"
+        android:hint="Mot de passe"
+        android:inputType="textPassword"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        android:padding="12dp"/>
+
+    <Spinner
+        android:id="@+id/spinnerFonctionModifyUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextMotDePasseModifyUser"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        android:padding="12dp"
+        android:entries="@array/fonction_options"
+        android:spinnerMode="dropdown"/>
+
+    <Button
+        android:id="@+id/buttonModifierModifyUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerFonctionModifyUser"
+        android:text="Modifier Utilisateur"
+        android:background="@color/blue"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"/>
+
+
+</RelativeLayout>

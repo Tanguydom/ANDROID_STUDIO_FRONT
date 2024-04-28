@@ -4,6 +4,7 @@
     package="com.example.projet_gerante_domergue">
 
     <!-- Permission pour accéder à Internet -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -35,7 +36,8 @@
         <activity android:name=".activity.home.HomeActivity"/>
         <activity android:name=".activity.account.MyEventsActivity"/>
         <activity android:name=".activity.account.MyParticipationsActivity"/>
-
+        <activity android:name=".activity.account.ModifyUserActivity"/>
+        <activity android:name=".activity.account.DeleteUserActivity"/>
 
     </application>
 

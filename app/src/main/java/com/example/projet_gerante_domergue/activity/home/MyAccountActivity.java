@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.projet_gerante_domergue.activity.account.DeleteUserActivity;
+import com.example.projet_gerante_domergue.activity.account.ModifyUserActivity;
 import com.example.projet_gerante_domergue.models.User;
 
 
@@ -105,6 +107,23 @@ public class MyAccountActivity extends AppCompatActivity {
         // Bouton "Mes Participations"
         buttonMesParticipations.setOnClickListener(v -> {
             Intent intent = new Intent(MyAccountActivity.this, MyParticipationsActivity.class);
+            intent.putExtra("id", userId);
+            startActivity(intent);
+        });
+
+        // Bouton "Modifier mon compte"
+        Button buttonModifierMonCompte = findViewById(R.id.buttonModifier);
+        buttonModifierMonCompte.setOnClickListener(v -> {
+            Intent intent = new Intent(MyAccountActivity.this, ModifyUserActivity.class);
+            intent.putExtra("id", userId);
+            startActivity(intent);
+
+        });
+
+        // Bouton "Supprimer mon compte"
+        Button buttonSupprimerMonCompte = findViewById(R.id.buttonSupprimer);
+        buttonSupprimerMonCompte.setOnClickListener(v -> {
+            Intent intent = new Intent(MyAccountActivity.this, DeleteUserActivity.class);
             intent.putExtra("id", userId);
             startActivity(intent);
         });

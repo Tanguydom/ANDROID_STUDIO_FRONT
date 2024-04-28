@@ -65,7 +65,7 @@
                     // Envoyer les données à l'API
                     try {
                         // Exécuter la requête HTTP POST de manière asynchrone
-                        PostHttpRequestAsync postRequest = new PostHttpRequestAsync();
+                        postRequest = new PostHttpRequestAsync();
                         Pair<Integer, String> response = postRequest.execute("/connexion", postData).get();
 
                         int responseCode = response.first; // Récupérer le code de statut de la réponse
