@@ -4,49 +4,65 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- Champs pour modifier l'utilisateur -->
-    <EditText
-        android:id="@+id/editTextNom"
+    <!-- Champs pour afficher les informations de l'utilisateur -->
+    <TextView
+        android:id="@+id/textViewNom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nom"
-        android:inputType="text"
+        android:text="Nom"
+        android:textSize="18sp"
+        android:textStyle="bold"
         android:layout_margin="16dp" />
 
-    <EditText
-        android:id="@+id/editTextPrenom"
+    <TextView
+        android:id="@+id/textViewPrenom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Prénom"
-        android:inputType="text"
-        android:layout_below="@id/editTextNom"
+        android:text="Prénom"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/textViewNom"
         android:layout_margin="16dp" />
 
-    <EditText
-        android:id="@+id/editTextEmail"
+    <TextView
+        android:id="@+id/textViewEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:layout_below="@id/editTextPrenom"
+        android:text="Email"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/textViewPrenom"
         android:layout_margin="16dp" />
 
-    <EditText
-        android:id="@+id/editTextMotDePasse"
+
+    <TextView
+        android:id="@+id/textViewFonction"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Mot de passe"
-        android:inputType="textPassword"
-        android:layout_below="@id/editTextEmail"
+        android:text="Fonction"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/textViewEmail"
         android:layout_margin="16dp" />
 
-    <EditText
-        android:id="@+id/editTextFonction"
+    <TextView
+        android:id="@+id/textViewLongitude"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Fonction"
-        android:inputType="text"
-        android:layout_below="@id/editTextMotDePasse"
+        android:text="Longitude"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/textViewFonction"
+        android:layout_margin="16dp" />
+
+    <TextView
+        android:id="@+id/textViewLatitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Latitude"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/textViewLongitude"
         android:layout_margin="16dp" />
 
     <!-- Boutons pour modifier et supprimer l'utilisateur -->
@@ -55,7 +71,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Modifier"
-        android:layout_below="@id/editTextFonction"
+        android:layout_below="@id/textViewLatitude"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_alignParentEnd="true" />
@@ -65,7 +81,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Supprimer"
-        android:layout_below="@id/editTextFonction"
+        android:layout_below="@id/textViewLatitude"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
         android:layout_alignParentStart="true" />
@@ -99,5 +115,6 @@
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </RelativeLayout>
+
 
 

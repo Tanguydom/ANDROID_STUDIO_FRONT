@@ -14,6 +14,8 @@ public class HomeActivity extends AppCompatActivity {
 
     private static final int NAVIGATION_VILLE = 1;
     private static final int NAVIGATION_MON_COMPTE = 2;
+    private int userId;
+    int itemId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +25,8 @@ public class HomeActivity extends AppCompatActivity {
 
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
             Intent intent;
-            int itemId = item.getItemId(); // Obtenez l'ID de l'élément de menu
+            itemId = item.getItemId(); // Obtenez l'ID de l'élément de menu
+            userId = getIntent().getIntExtra("id", 0);
 
             // Utilisez des constantes pour les identifiants des éléments de menu
             final int CITY_ID = R.id.navigation_ville;
@@ -31,10 +34,12 @@ public class HomeActivity extends AppCompatActivity {
 
             if (itemId == CITY_ID) {
                 intent = new Intent(HomeActivity.this, CityActivity.class);
+                intent.putExtra("id", userId);
                 startActivity(intent);
                 return true;
             } else if (itemId == PROFILE_ID) {
                 intent = new Intent(HomeActivity.this, MyAccountActivity.class);
+                intent.putExtra("id", userId);
                 startActivity(intent);
                 return true;
             }

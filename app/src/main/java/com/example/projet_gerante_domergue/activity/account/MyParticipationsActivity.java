@@ -4,8 +4,11 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.projet_gerante_domergue.R;
+import com.example.projet_gerante_domergue.adapter.ParticipationAdapter;
 import com.example.projet_gerante_domergue.models.Participation;
 import com.example.projet_gerante_domergue.utils.GetRequestTask;
 import com.google.firebase.crashlytics.buildtools.reloc.com.google.common.reflect.TypeToken;
@@ -17,32 +20,32 @@ import java.util.List;
 public class MyParticipationsActivity extends AppCompatActivity {
 
     private TextView textViewParticipationData;
+    private int userId;
+    GetRequestTask getRequest = new GetRequestTask();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_partcipation);
+        setContentView(R.layout.activity_mypartcipation);
+
+        userId = getIntent().getIntExtra("id", 0);
+        String userIdString = String.valueOf(userId);
 
         textViewParticipationData = findViewById(R.id.textViewParticipation);
 
         try {
-            GetRequestTask getRequest = new GetRequestTask();
-            String participationData = getRequest.execute("/utilisateurs/1/evenementsParticipe").get();
+            //String participationData = getRequest.execute("/utilisateurs/1/evenementsParticipe").get();
+            String participationData = getRequest.execute("/utilisateurs/"+userIdString+"/evenementsParticipe").get();
 
             Gson gson = new Gson();
             Type participationType = new TypeToken<List<Participation>>(){}.getType();
             List<Participation> participations = gson.fromJson(participationData, participationType);
 
-            StringBuilder participationsText = new StringBuilder();
-            for (Participation participation : participations) {
-                participationsText.append("nom_evenement: ").append(participation.getNom_evenement()).append("\n");
-                participationsText.append("description: ").append(participation.getDescription()).append("\n");
-                participationsText.append("date_evenement: ").append(participation.getDate_evenement()).append("\n");
-                participationsText.append("nom_createur: ").append(participation.getNom_createur()).append("\n");
-                participationsText.append("prenom_createur: ").append(participation.getPrenom_createur()).append("\n\n");
-            }
+            RecyclerView recyclerView = findViewById(R.id.recyclerViewParticipation);
+            recyclerView.setLayoutManager(new LinearLayoutManager(this));
+            recyclerView.setAdapter(new ParticipationAdapter(participations));
 
-            textViewParticipationData.setText(participationsText.toString());
 
         }catch (Exception e) {
             e.printStackTrace();

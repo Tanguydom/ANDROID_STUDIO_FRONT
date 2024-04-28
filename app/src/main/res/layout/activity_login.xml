@@ -6,10 +6,10 @@
     android:background="#F8F8F8">
 
     <EditText
-        android:id="@+id/editTextEmail"
+        android:id="@+id/editTextPrenom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email"
+        android:hint="Prenom"
         android:inputType="textEmailAddress"
         android:layout_margin="16dp"
         android:background="#FFFFFF"
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:hint="Password"
         android:inputType="textPassword"
-        android:layout_below="@id/editTextEmail"
+        android:layout_below="@id/editTextPrenom"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:background="#FFFFFF"
