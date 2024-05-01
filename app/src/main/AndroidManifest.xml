@@ -38,6 +38,7 @@
         <activity android:name=".activity.account.MyParticipationsActivity"/>
         <activity android:name=".activity.account.ModifyUserActivity"/>
         <activity android:name=".activity.account.DeleteUserActivity"/>
+        <activity android:name=".activity.create_city.CreateCityActivity"/>
 
     </application>
 
