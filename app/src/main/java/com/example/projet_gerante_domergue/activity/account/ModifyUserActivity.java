@@ -35,8 +35,8 @@ public class ModifyUserActivity extends AppCompatActivity implements LocationLis
     private Button buttonEnregistrer;
     private LocationManager locationManager;
 
-    private double longitude;
-    private double latitude;
+    private double longitude=0.0;
+    private double latitude=0.0;
 
     PutRequestTask putRequest = new PutRequestTask();
 
@@ -69,18 +69,6 @@ public class ModifyUserActivity extends AppCompatActivity implements LocationLis
                 String email = editTextEmail.getText().toString();
                 String password = editTextPassword.getText().toString();
                 String fonction = editTextfunction.getSelectedItem().toString();
-
-                // Récupérer les coordonnées de géolocalisation
-                try {
-                    locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, ModifyUserActivity.this);
-                    Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-                    if (location != null) {
-                        longitude = location.getLongitude();
-                        latitude = location.getLatitude();
-                    }
-                } catch (SecurityException e) {
-                    e.printStackTrace();
-                }
 
                 // Créer une chaîne JSON avec les données à envoyer, y compris les coordonnées de géolocalisation
                 String postData = String.format("{\"Nom\":\"%s\",\"Prenom\":\"%s\",\"Email\":\"%s\",\"Mot_de_passe\":\"%s\",\"fonction\":\"%s\",\"longitude\":%f,\"latitude\":%f}", nom, prenom, email, password, fonction, longitude, latitude);

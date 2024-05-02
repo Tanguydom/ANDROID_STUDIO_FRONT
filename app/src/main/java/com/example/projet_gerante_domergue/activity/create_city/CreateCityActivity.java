@@ -17,7 +17,7 @@ import org.json.JSONObject;
 
 public class CreateCityActivity extends AppCompatActivity {
     private EditText editTextCityName, editTextCityCountry;
-    private Button buttonCreateCity;
+    private Button buttonCreateCity, buttonRetour;
     private PostHttpRequestAsync postRequest = new PostHttpRequestAsync();
     private int userId;
 
@@ -32,6 +32,7 @@ public class CreateCityActivity extends AppCompatActivity {
         editTextCityName = findViewById(R.id.editTextCityName);
         editTextCityCountry = findViewById(R.id.editTextCityCountry);
         buttonCreateCity = findViewById(R.id.buttonCreateCity);
+        buttonRetour = findViewById(R.id.buttonRetourCity);
 
         buttonCreateCity.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +49,15 @@ public class CreateCityActivity extends AppCompatActivity {
                     Toast.makeText(CreateCityActivity.this, "Erreur lors de la création de la ville", Toast.LENGTH_SHORT).show();
                     e.printStackTrace();
                 }
+                Intent intent = new Intent(CreateCityActivity.this, CityActivity.class);
+                intent.putExtra("id", userId);
+                startActivity(intent);
+            }
+        });
+
+        buttonRetour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 Intent intent = new Intent(CreateCityActivity.this, CityActivity.class);
                 intent.putExtra("id", userId);
                 startActivity(intent);

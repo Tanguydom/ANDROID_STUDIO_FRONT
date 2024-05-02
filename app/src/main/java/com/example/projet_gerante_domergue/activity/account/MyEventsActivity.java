@@ -8,8 +8,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.projet_gerante_domergue.R;
-import com.example.projet_gerante_domergue.adapter.EventAdapter;
-import com.example.projet_gerante_domergue.models.Event;
+import com.example.projet_gerante_domergue.adapter.MyEventAdapter;
+import com.example.projet_gerante_domergue.models.MyEvent;
 import com.example.projet_gerante_domergue.utils.GetRequestTask;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -40,12 +40,12 @@ public class MyEventsActivity extends AppCompatActivity {
 
             // Désérialiser le JSON en une liste d'objets Event
             Gson gson = new Gson();
-            Type eventType = new TypeToken<List<Event>>(){}.getType();
-            List<Event> events = gson.fromJson(eventData, eventType);
+            Type eventType = new TypeToken<List<MyEvent>>(){}.getType();
+            List<MyEvent> events = gson.fromJson(eventData, eventType);
 
             RecyclerView recyclerView = findViewById(R.id.recyclerViewEvent);
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
-            recyclerView.setAdapter(new EventAdapter(events));
+            recyclerView.setAdapter(new MyEventAdapter(events));
 
         } catch (Exception e) {
             e.printStackTrace();

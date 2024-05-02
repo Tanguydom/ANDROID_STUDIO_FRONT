@@ -21,4 +21,9 @@ public class City {
     public String getCountry() {
         return country;
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }

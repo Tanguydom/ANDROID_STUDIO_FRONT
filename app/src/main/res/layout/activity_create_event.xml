@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Créer un nouvel événement"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nom de l'événement:"
+        android:textSize="16sp"/>
+
+    <EditText
+        android:id="@+id/editText_nom_evenement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Entrez le nom de l'événement"
+        android:inputType="text"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description:"
+        android:textSize="16sp"/>
+
+    <EditText
+        android:id="@+id/editText_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Entrez une description"
+        android:inputType="textMultiLine"
+        android:minLines="3"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date de l'événement:"
+        android:textSize="16sp"/>
+
+    <EditText
+        android:id="@+id/editText_date_evenement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="YYYY-MM-DD"
+        android:inputType="date"/>
+
+    <Spinner
+        android:id="@+id/spinner_villes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="adresse de l'événement:"
+        android:layout_marginTop="12dp"
+        android:textSize="16sp"/>
+
+    <EditText
+        android:id="@+id/editText_adresse_evenement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="31 allée des peupliers"
+        android:inputType="text"/>
+
+    <Button
+        android:id="@+id/button_creer_evenement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Créer l'événement"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>
