@@ -8,7 +8,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.projet_gerante_domergue.R;
 import com.example.projet_gerante_domergue.models.City;
 
-public class CityHolder extends RecyclerView.ViewHolder {
+public class CityHolder extends RecyclerView.ViewHolder // Holder pour afficher une ville
+{
 
     TextView nom_ville;
     TextView nom_pays;

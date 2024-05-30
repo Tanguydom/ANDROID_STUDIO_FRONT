@@ -13,7 +13,7 @@ import java.net.URL;
 
 public class PostHttpRequestAsync extends AsyncTask<String, Void, Pair<Integer, String>> {
 
-    private static final String BASE_URL = "http://10.0.2.2:3000"; // URL de votre API
+    private static final String BASE_URL = "https://android.karru.tech"; // URL de votre API
 
     @Override
     protected Pair<Integer, String> doInBackground(String... params) {

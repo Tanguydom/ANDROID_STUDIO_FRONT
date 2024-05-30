@@ -10,7 +10,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class DeleteRequestTask extends AsyncTask<String, Void, String> {
-    private static final String BASE_URL = "http://10.0.2.2:3000"; // URL de votre API
+    private static final String BASE_URL = "https://android.karru.tech"; // URL de votre API
     @Override
     protected String doInBackground(String... params) {
         String endpoint = params[0];

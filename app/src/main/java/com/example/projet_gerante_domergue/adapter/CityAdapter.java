@@ -11,7 +11,7 @@ import com.example.projet_gerante_domergue.models.City;
 
 import java.util.List;
 
-public class CityAdapter extends RecyclerView.Adapter<CityHolder>
+public class CityAdapter extends RecyclerView.Adapter<CityHolder> // Adapter pour afficher les villes
 {
     private List<City> cities;
 

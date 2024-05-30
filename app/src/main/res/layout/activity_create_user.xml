@@ -69,17 +69,25 @@
         android:entries="@array/fonction_options"
         android:spinnerMode="dropdown"/>
 
+    <ImageView
+        android:id="@+id/imageViewPhoto"
+        android:layout_width="59dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/spinnerFonction"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_camera"/>
+
     <Button
         android:id="@+id/buttonEnregistrer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/spinnerFonction"
+        android:layout_below="@id/imageViewPhoto"
         android:text="Enregistrer"
         android:background="@color/blue"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         android:layout_marginTop="16dp"
         android:padding="16dp"/>
-
 
 </RelativeLayout>
