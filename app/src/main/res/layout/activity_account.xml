@@ -4,42 +4,41 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- Champs pour afficher les informations de l'utilisateur -->
+    <!-- Fields to display user information -->
     <TextView
-        android:id="@+id/textViewNom"
+        android:id="@+id/textViewName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nom"
+        android:text="@string/name"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_margin="16dp" />
 
     <TextView
-        android:id="@+id/textViewPrenom"
+        android:id="@+id/textViewFirstName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Prénom"
+        android:text="@string/first_name"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_below="@id/textViewNom"
+        android:layout_below="@id/textViewName"
         android:layout_margin="16dp" />
 
     <TextView
         android:id="@+id/textViewEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Email"
+        android:text="@string/email"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_below="@id/textViewPrenom"
+        android:layout_below="@id/textViewFirstName"
         android:layout_margin="16dp" />
 
-
     <TextView
-        android:id="@+id/textViewFonction"
+        android:id="@+id/textViewFunction"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Fonction"
+        android:text="@string/function"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_below="@id/textViewEmail"
@@ -49,17 +48,17 @@
         android:id="@+id/textViewLongitude"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Longitude"
+        android:text="@string/longitude"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_below="@id/textViewFonction"
+        android:layout_below="@id/textViewFunction"
         android:layout_margin="16dp" />
 
     <TextView
         android:id="@+id/textViewLatitude"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Latitude"
+        android:text="@string/latitude"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_below="@id/textViewLongitude"

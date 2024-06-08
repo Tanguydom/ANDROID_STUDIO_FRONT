@@ -53,10 +53,10 @@ public class MyAccountActivity extends AppCompatActivity {
             User userInfos = gson.fromJson(user, User.class); // Convertir le JSON en objet User
 
             // Récupérer les vues des champs EditText
-            TextView textViewNom = findViewById(R.id.textViewNom);
-            TextView textViewPrenom = findViewById(R.id.textViewPrenom);
+            TextView textViewNom = findViewById(R.id.textViewName);
+            TextView textViewPrenom = findViewById(R.id.textViewFirstName);
             TextView textViewEmail = findViewById(R.id.textViewEmail);
-            TextView textViewFonction = findViewById(R.id.textViewFonction);
+            TextView textViewFonction = findViewById(R.id.textViewFunction);
             TextView textViewLongitude = findViewById(R.id.textViewLongitude);
             TextView textViewLatitude = findViewById(R.id.textViewLatitude);
 

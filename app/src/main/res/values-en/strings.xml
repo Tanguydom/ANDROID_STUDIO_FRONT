@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyApp</string>
+    <string name="name">Name</string>
+    <string name="first_name">First Name</string>
+    <string name="email">Email</string>
+    <string name="function">Function</string>
+    <string name="longitude">Longitude</string>
+    <string name="latitude">Latitude</string>
+    <string name="modify">Modify</string>
+    <string name="delete">Delete</string>
+    <string name="my_created_events">My Created Events</string>
+    <string name="my_participations">My Participations</string>
+</resources>

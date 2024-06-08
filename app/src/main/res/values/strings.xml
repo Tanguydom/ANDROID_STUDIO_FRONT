@@ -1,7 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Projet_Gerante_Domergue</string>
-    <string-array name="fonction_options">
-        <item>citoyen</item>
-        <item>organisme</item>
-    </string-array>
+    <string name="app_name">MonAppli</string>
+    <string name="name">Nom</string>
+    <string name="first_name">Prénom</string>
+    <string name="email">Email</string>
+    <string name="function">Fonction</string>
+    <string name="longitude">Longitude</string>
+    <string name="latitude">Latitude</string>
+    <string name="modify">Modifier</string>
+    <string name="delete">Supprimer</string>
+    <string name="my_created_events">Mes Événements Créés</string>
+    <string name="my_participations">Mes Participations</string>
 </resources>
